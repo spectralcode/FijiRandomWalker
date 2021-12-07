@@ -4,7 +4,7 @@
   <img src="images/mini_random_walk_animation.gif">
 </p>
 
-This macro creates ab RGB stack of a random walk. The random walker is displayed as red pixel. Each frame in the stack is a single step. p. 
+This macro creates an RGB stack of a random walk. The random walker is displayed as red pixel. Each frame in the stack is a single step. p. 
 
 Video
 --------
