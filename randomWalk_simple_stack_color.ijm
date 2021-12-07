@@ -49,13 +49,13 @@ for (i = 1; i < steps; i++) {
 	}
 
 	//calculate color of pixel that was was visited by walker in last frame and set color
-    r = (pixelValueOld>>16)&0xff + colorDelta; // extract red byte (bits 23-17) and add colorDelta
-    g = (pixelValueOld>>8)&0xff + colorDelta ; // extract green byte (bits 15-8) and add colorDelta
-    b = pixelValueOld&0xff + colorDelta; // extract blue byte (bits 7-0) and add colorDelta
- 	r = clamp(0, r, 255);
- 	g = clamp(0, g, 255);
- 	b = clamp(0, b, 255);
-    pixelValue = ((r & 0xff) <<16) + ((g & 0xff) << 8) + (b & 0xff);
+	r = (pixelValueOld>>16)&0xff + colorDelta; // extract red byte (bits 23-17) and add colorDelta
+	g = (pixelValueOld>>8)&0xff + colorDelta ; // extract green byte (bits 15-8) and add colorDelta
+	b = pixelValueOld&0xff + colorDelta; // extract blue byte (bits 7-0) and add colorDelta
+	r = clamp(0, r, 255);
+	g = clamp(0, g, 255);
+	b = clamp(0, b, 255);
+	pixelValue = ((r & 0xff) <<16) + ((g & 0xff) << 8) + (b & 0xff);
 	setPixel(xOld, yOld, pixelValue);
 
 	//remember value of current pixel 
@@ -69,13 +69,13 @@ for (i = 1; i < steps; i++) {
 run("Delete Slice");
 
 function clamp(lower, value, upper){
-    if (value<lower) {
-    	value = lower;
-    }
-    if (value>upper) {
-    	value = upper;
-    }
-    return value;
+	if (value<lower) {
+		value = lower;
+	}
+	if (value>upper) {
+		value = upper;
+	}
+	return value;
 }
 
 function copyAndAddFrameToStack(){
